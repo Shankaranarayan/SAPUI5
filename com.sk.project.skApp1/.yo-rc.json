@@ -1,0 +1,21 @@
+{
+  "generator-template-ui5-project": {
+    "projectname": "skApp1",
+    "namespaceUI5": "com.sk.project",
+    "platform": "Static webserver",
+    "viewtype": "XML",
+    "ui5libs": "Local resources (SAPUI5)",
+    "newdir": true,
+    "namespaceURI": "com/sk/project",
+    "opa5pos": [
+      "Main"
+    ],
+    "opa5Journeys": [
+      "Main"
+    ],
+    "uimodules": [
+      "uimodule"
+    ],
+    "setupCompleted": true
+  }
+}

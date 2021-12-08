@@ -1,0 +1,123 @@
+{
+  "_version": "1.21.0",
+  "sap.app": {
+    "id": "com.sk.project.skApp1",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}"
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "rootView": {
+      "viewName": "com.sk.project.skApp1.view.MainView",
+      "type": "XML",
+      "async": true,
+      "id": "idAppControl"
+    },
+    "dependencies": {
+      "minUI5Version": "1.60.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {},
+        "sap.ui.layout": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.sk.project.skApp1.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "com.sk.project.skApp1.view",
+        "controlId": "idAppControl",
+        "controlAggregation": "pages",
+        "async": true
+      },
+      "routes": [
+        {
+          "name": "RouteMainView",
+          "pattern": "RouteMainView",
+          "target": ["TargetMainView"]
+        },
+        {
+          "name": "RouteMainView",
+          "pattern": "",
+          "target": ["Tiles"]
+        },
+        {
+          "name": "first",
+          "pattern": "first",
+          "target": ["Countdown"]
+        },
+        {
+          "name": "second",
+          "pattern": "second",
+          "target": ["Covid"]
+        }
+      ],
+      "targets": {
+        "TargetMainView": {
+          "viewType": "XML",
+          "viewLevel": 1,
+          "viewId": "idAppControl",
+          "viewName": "MainView"
+        },
+        "Tiles": {
+          "viewType": "XML",
+          "viewLevel": 1,
+          "viewId": "tiles",
+          "viewName": "Tiles"
+        },
+        "Countdown": {
+          "viewType": "XML",
+          "viewLevel": 1,
+          "viewId": "countdown.Countdown",
+          "viewName": "countdown.Countdown"
+        },
+        "Covid": {
+          "viewType": "XML",
+          "viewLevel": 1,
+          "viewId": "covid.Covid",
+          "viewName": "covid.Covid"
+        }
+      }
+    }
+  }
+}

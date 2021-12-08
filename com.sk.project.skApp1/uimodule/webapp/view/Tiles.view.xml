@@ -1,0 +1,15 @@
+ <mvc:View controllerName="com.sk.project.skApp1.controller.Tiles"
+  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:l="sap.ui.layout"
+  xmlns:mvc="sap.ui.core.mvc">
+<Page id="tiles" showHeader="false">
+<l:VerticalLayout>
+<l:HorizontalLayout content="{tiles>/}" allowWrapping="true">
+	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{tiles>title}"
+		frameType="OneByHalf" press="press(${tiles>route})">
+	</GenericTile>
+</l:HorizontalLayout>
+</l:VerticalLayout>
+</Page>
+</mvc:View>
